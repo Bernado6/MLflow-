@@ -1,5 +1,27 @@
 
-## Virtual Environment
+## Virtual Environment with python
+Create Virutal Environment with Conda
+
+### Install the virtualenv package
+```python
+pip install virtualenv
+```
+
+### Create Virtual Environment 
+```python
+python -m venv mlflow-venv
+```
+### Activating Virtual Environment
+```python
+source mlflow-venv/bin/activate # Linux/Ubuntu
+mlflow-venv/Scripts/activate    # for Windows
+```
+
+```python
+pip install mlflow
+```
+
+## Virtual Environment with conda
 Create Virutal Environment with Conda
 
 ```python
