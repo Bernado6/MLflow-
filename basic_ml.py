@@ -62,14 +62,15 @@ def main(alpha, l1_ratio):
         mlflow.log_metric("mae", mae)
         mlflow.log_metric("r2", r2)
         mlflow.sklearn.log_model(model, "trained_model") # model, foldername
-        os.makedirs("dummy", exist_ok=True)
-        with open("dummy/example.txt", "wt") as f:
-            f.write(f"Artifact created at {time.asctime()}")
-        mlflow.log_artifacts("dummy")
+        # os.makedirs("dummy", exist_ok=True)
+        # with open("dummy/example.txt", "wt") as f:
+        #     f.write(f"Artifact created at {time.asctime()}")
+        # mlflow.log_artifacts("dummy")
         mlflow.sklearn.save_model(model,
                                   os.path.join("Model" ,
-                                               "Artifactcs",
-                                               unique_format))# Change my_model to path of your choice to save the model
+                                               "Artifacts",
+                                               unique_format)# Path to save the model Artifacts
+                                  )
         
         
         
